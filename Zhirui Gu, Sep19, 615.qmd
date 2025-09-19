@@ -1,0 +1,52 @@
+---
+title: "Sep19, 615"
+format: html
+editor: visual
+---
+
+# Description
+
+The `DNase` data frame has 176 rows and 3 columns of data obtained during development of an ELISA assay for the recombinant protein DNase in rat serum.
+
+This dataset was originally part of package [**nlme**](https://cran.r-project.org/package=nlme), and that has methods (including for `[`, `as.data.frame`, `plot` and `print`) for its grouped-data classes.
+
+# Format
+
+Run: an ordered factor with levels `10` \< ... \< `3` indicating the assay run.
+
+conc: a numeric vector giving the known concentration of the protein.
+
+density: a numeric vector giving the measured optical density (dimensionless) in the assay. Duplicate optical density measurements were obtained.
+
+# Details
+
+An object of class `c("nfnGroupedData", "nfGroupedData", "groupedData", "data.frame")` containing the following columns:
+
+```{r}
+#| label: setup
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(ggplot2)
+library(lorem)
+```
+
+```{r}
+# Load dataset
+data(DNase, package = "datasets")
+
+# Quick look
+head(DNase)
+
+# Plot density vs concentration
+library(ggplot2)
+
+ggplot(DNase, aes(x = conc, y = density, color = Run)) +
+  geom_point() +
+  geom_smooth(method = "loess", se = FALSE) +
+  labs(title = "Optical Density vs Concentration in DNase Experiment",
+       x = "DNA Concentration",
+       y = "Optical Density") +
+  theme_minimal()
+```
