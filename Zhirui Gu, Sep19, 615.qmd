@@ -1,6 +1,6 @@
 ---
 title: "in_class activity,Sep19, 615"
-format: pdf
+format: html
 editor: visual
 ---
 
