@@ -1,5 +1,5 @@
 ---
-title: "Sep19, 615"
+title: "in_class activity,Sep19, 615"
 format: html
 editor: visual
 ---
@@ -14,9 +14,9 @@ This dataset was originally part of package [**nlme**](https://cran.r-project.or
 
 Run: an ordered factor with levels `10` \< ... \< `3` indicating the assay run.
 
-conc: a numeric vector giving the known concentration of the protein.
+Conc: a numeric vector giving the known concentration of the protein.
 
-density: a numeric vector giving the measured optical density (dimensionless) in the assay. Duplicate optical density measurements were obtained.
+Density: a numeric vector giving the measured optical density (dimensionless) in the assay. Duplicate optical density measurements were obtained.
 
 # Details
 
